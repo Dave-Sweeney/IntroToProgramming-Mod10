@@ -19,16 +19,23 @@ namespace IntroToProgramming_Mod10
             Object[] myArray = new object[] { myInt, myString, myChar };
 
             // EX 1 Task 1.2:  Create another variable
-            // Convert myInt to a Double by suing implicit and widening casting
-            double myDouble = (int)myArray[0];
+            // Convert myInt to a Double by using implicit and widening casting
+            double myDouble = myInt;
 
             // Convert myDouble to an integer by using explicit cast
             myInt = (int)myDouble;
+            
 
             // EX 1 Task 2:  Cast the variables in the aray back to their original data types.
             int newInt = (int)myArray[0];
             string newString = (string)myArray[1];
             char newChar = (char)myArray[2];
+
+            Console.WriteLine("The whole array is of type: " + myArray.GetType());
+            foreach(var item in myArray)
+            {
+                Console.WriteLine("The object in this element is: " + item.GetType());
+            }
 
             Console.ReadKey();
 
